@@ -239,103 +239,178 @@ var arr=[10,'20',30, true];
 
 //Array objects
 
-var arrayNew = [
-    {
-        a: 10,
-        b: 20,
-        c: 0
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 1
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 2
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 3
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 4
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 5
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 6
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 7
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 8
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 9
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 10
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 11
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 12
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 13
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 14
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 15
-    },
-    {
-        a: 10,
-        b: 20,
-        c: 16
-    }, {
-        a: 10,
-        b: 20,
-        c: 17
-    }
-]
-var length=arrayNew.length;
-console.log(length);
-console.log(arrayNew);
-//logic for accessing object property at the prime index
-for(var i=2;i<length;i++){
-    if(((i/2==1)&&(i%2==0))||((i/3==1)&&(i%3==0))||((i%2==1)&&(i%3!=0))){
-        console.log(arrayNew[i].c);
-    }
+// var arrayNew = [
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 0
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 1
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 2
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 3
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 4
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 5
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 6
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 7
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 8
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 9
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 10
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 11
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 12
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 13
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 14
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 15
+//     },
+//     {
+//         a: 10,
+//         b: 20,
+//         c: 16
+//     }, {
+//         a: 10,
+//         b: 20,
+//         c: 17
+//     }
+// ]
+// var length=arrayNew.length;
+// console.log(length);
+// console.log(arrayNew);
+// //logic for accessing object property at the prime index
+// for(var i=2;i<length;i++){
+//     if(((i/2==1)&&(i%2==0))||((i/3==1)&&(i%3==0))||((i%2==1)&&(i%3!=0))){
+//         console.log(arrayNew[i].c);
+//     }
+// }
+
+//Arrow function
+
+// let z=(a,b)=>{return a+b;} 
+// console.log(z(100,20));
+
+//Array helper methods
+//forEach
+var arrm=['a','b','c','d'];
+// // arrm.forEach(function(e){
+// //     console.log(e);
+// // });
+
+//  arrm.forEach((e) => {console.log(e);} );
+
+//Map
+
+let arr5=[1,2,3,4]
+// arr5.map((f) => {console.log(f*5);});
+// arr5.map(function(f){
+//     console.log(f+10);
+// })
+
+//filter
+
+//  let arr6=arr5.filter(function(g){
+//     return g>2;
+// });
+
+// console.log(arr6);
+
+// let arr7=arr5.filter((e)=>{return e<5;});
+// console.log(arr7);
+
+//Reduce
+
+// let array01=[1,2,3,4]
+// let req=array01.reduce((acc, cur)=>{
+//     acc+=cur;
+//     return acc;
+
+// },0);
+// console.log(req);
+
+//Find
+
+// let arr02=[1,2,3,3,4,5,6,7]
+// let ouput=arr02.find((x)=>{
+//     return x>5;
+// })
+// console.log(ouput);
+
+//Destructuring
+
+let arr03=['a','b','c','d']
+
+let [x,y]=arr03;
+console.log(x,y);
+
+let obj5={
+    a:1,
+    b:2,
+    c:3
 }
+
+let{a,b}=obj5;
+console.log(b);
+
+//string literals
+
+const fname='Vishal';
+const lname='sharma';
+const name=`hello ${fname} ${lname}`;
+
+console.log(name);
