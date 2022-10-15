@@ -414,3 +414,57 @@ const lname='sharma';
 const name=`hello ${fname} ${lname}`;
 
 console.log(name);
+
+//This
+
+console.log(this);
+var name1='donald';
+console.log(this.name1);
+
+var obj01={
+    name1:'trump',
+    getName:function(){
+        console.log(this.name1);
+    }
+}
+
+obj01.getName();
+
+
+//spread operator
+
+const n1=[1,2,3];
+const n2=[4,5,6];
+var n6=[2,2,3];
+console.log(...n6);
+function addNum(a,b,c){return a+b+c;}
+console.log(addNum(...n6));
+
+const n3=[...n1,...n2]
+console.log(n3);
+
+ var n4 ='welcome';
+ console.log([...n4]);
+
+//rest operator
+
+const [m, ...n]=n3;
+console.log(m,n);
+
+//Higher order functions
+
+let arry = [1,2,3,4];
+
+let common =(arr,func) =>{
+    let output=[];
+    for(let i=0;i<arr.length;i++){
+        output.push(func(arr[i]))
+    }
+    return output;
+}
+
+let add1 = input =>input+2;
+let mul = input =>input*2;
+
+console.log(common(arry,add1));
+console.log(common(arry,mul));
